@@ -4,6 +4,7 @@ import { useState } from 'react';
 import auth from '../../Api/Auth.js';
 import { useNavigate } from 'react-router-dom';
 import Dashboard from '../Dashboard/Dashboard.jsx';
+import Header from '../Header/Header.jsx';
 
 
 
@@ -71,6 +72,7 @@ const Login = () => {
 
 
   return (
+    <>
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
     <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-sm">
       <h1 className="text-2xl font-bold text-center text-gray-800 mb-6">Login</h1>
@@ -104,6 +106,7 @@ const Login = () => {
       </form>
     </div>
   </div>
+  </>
   );
 }
 

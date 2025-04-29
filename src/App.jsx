@@ -8,27 +8,27 @@ import EmployDetails from './components/EmployDetails/EmployDetails';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import EmployList from './components/EmployList/EmployList';
 import Logout from './components/logout/Logout';
-import Header from './components/logout/Header';
+import Header from './components/Header/Header';
 
 
 const queryClient = new QueryClient()
 
-
 function App() {
-
 
   const token = localStorage.getItem("Token")
   return (
     <>
+    {/* <Header/> */}
       <QueryClientProvider client={queryClient}>
         <Router>
           <Routes>
-            <Route path="/" element={<Login />} />
-            {/* <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/employdetails/:id" element={<EmployDetails />} />
-          <Route path="employlist" element={<EmployList />} /> */}
-            <Route element={<ProtectedRoute/>}>
-                <Route element={<Header/>}>
+            
+           
+           
+   
+              <Route element={<Header/>}>
+                <Route path="/" element={<Login />} /> 
+                <Route element={<ProtectedRoute/>}> 
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/employdetails/:id" element={<EmployDetails />} />
                 <Route path="/employlist" element={<EmployList />} />
