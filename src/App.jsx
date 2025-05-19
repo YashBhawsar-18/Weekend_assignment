@@ -24,9 +24,7 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<Login />} />
-            {/* <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/employdetails/:id" element={<EmployDetails />} />
-          <Route path="employlist" element={<EmployList />} /> */}
+          
             <Route element={<ProtectedRoute/>}>
                 <Route element={<Header/>}>
                 <Route path="/dashboard" element={<Dashboard />} />
@@ -34,21 +32,7 @@ function App() {
                 <Route path="/employlist" element={<EmployList />} />
                 </Route>
               </Route>
-            
-            {/* {token ? (
-              <Route>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/employdetails/:id" element={<EmployDetails />} />
-                <Route path="/employlist" element={<EmployList />} />
-              </Route>
-            ) : (
-              <Routes>
-                <Route path="*" element={<Login />} />
-              </Routes>
-            )} */}
-
-
-
+           
 
           </Routes>
         </Router>
